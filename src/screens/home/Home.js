@@ -387,7 +387,7 @@ const Home = ({
             }}
 >
             {/* {t('e-commerce')} */}
-            Astro Puja
+            {t('Astro_Pooja')}
           </Text>
           <TouchableOpacity
             activeOpacity={0.8}
@@ -944,7 +944,7 @@ const Home = ({
               color: colors.black_color,
               fontFamily: fonts.medium,
             }}>
-            Video Call With Astrologers{' '}
+           {t('video_astrologer')}{' '}
           </Text>
           <TouchableOpacity
             activeOpacity={0.8}
@@ -1565,8 +1565,11 @@ const Home = ({
                 style={styles.panchangImage}
               />
             </TouchableOpacity>
-            <Text allowFontScaling={false} style={styles.punchangText}>
+            {/* <Text allowFontScaling={false} style={styles.punchangText}>
               Panchang
+            </Text> */}
+             <Text allowFontScaling={false} style={styles.punchangText}>
+              {t('panchang')}
             </Text>
           </View>
         </View>

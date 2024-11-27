@@ -41,7 +41,7 @@ const CallInvoice = ({ dispatch, callInvoiceVisble, callInvoiceData }) => {
                     <Text style={styles.text}>{moment(data?.invoice?.createdAt).format('DD MMM YYYY')}</Text>
                 </View>
                 <View style={styles.itemContainer}>
-                    <Text style={styles.text}>Order Time: </Text>
+                    <Text style={styles.text}>:Order Time </Text>
                     <Text style={styles.text}>{moment(data?.invoice?.createdAt).format('hh:mm A')}</Text>
                 </View>
 

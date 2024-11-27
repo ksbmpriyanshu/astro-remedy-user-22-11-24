@@ -698,7 +698,7 @@ const CustomerAccount = props => {
                     unfillColor="#FFFFFF"
                     isChecked={male}
                     disableBuiltInState
-                    text="Male"
+                    text={t('male')} 
                     textStyle={styles.checkBoxText}
                     onPress={() => {
                       setMale(true);
@@ -718,7 +718,7 @@ const CustomerAccount = props => {
                     unfillColor="#FFFFFF"
                     isChecked={female}
                     disableBuiltInState
-                    text="Female"
+                    text={t('female')} 
                     textStyle={styles.checkBoxText}
                     onPress={() => {
                       setMale(false);

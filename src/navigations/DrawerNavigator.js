@@ -329,7 +329,7 @@ function CustomDrawerContent(props) {
               />
             </LinearGradient>
             <Text allowFontScaling={false} style={styles.buttonText}>
-              My Order
+              {t('my_order')}
             </Text>
           </TouchableOpacity>
 
@@ -354,7 +354,7 @@ function CustomDrawerContent(props) {
               />
             </LinearGradient>
             <Text allowFontScaling={false} style={styles.buttonText}>
-              {t('Astro Puja')}
+              {t('Astro_Pooja')}
             </Text>
           </TouchableOpacity>
           {/* <TouchableOpacity onPress={() => navigation.navigate('GiftOrderHistory')} style={styles.buttonContainer}>
@@ -629,8 +629,7 @@ function CustomDrawerContent(props) {
               />
             </LinearGradient>
             <Text allowFontScaling={false} style={styles.buttonText}>
-              {/* {t(' Delete Account')} */}
-              Delete Account
+              {t('delete_account')}
             </Text>
           </TouchableOpacity>
         </View>

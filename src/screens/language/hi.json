@@ -3,7 +3,7 @@
       "wallet_balance":"वॉलेट बैलेंस",
       "payment_bill":"भुगतान बिल इतिहास",
       "order_history":"आदेश इतिहास",
-      "following":"अगले",
+      "following":"अनुसरण",
       "How":"हमारे ऐप का उपयोग कैसे करें",
       "What":"मैं ज्योतिषी से क्या पूछ सकता हूँ?",
       "astrologer_sign":"ज्योतिषी साइनअप",
@@ -47,6 +47,7 @@
       "time_of_birth": "जन्म समय",
       "male": "पुरुष",
       "female": "महिला",
+      "add_cart": "कार्ट में जोड़ें",
       "get_kundli": "कुंडली प्राप्त करें",
       "update_kundli": "कुंडली अपडेट करें",
       "charts": "चार्ट",
@@ -437,8 +438,11 @@
     "astakVarga": "अष्टकवर्ग",
     "sarvAstak": "सर्वअष्टक",
     "Ascedent_Report": "लग्न रिपोर्ट",
-    "e-commerce": "ई-कॉमर्स"
-
+    "e-commerce": "ई-कॉमर्स",
+    "my_order": "मेरा ऑर्डर",
+    "delete_account": "खाता हटाएँ",
+    "video": "वीडियो",
+    "video_astrologer": "ज्योतिषी के साथ वीडियो कॉल"
       
     }
 }

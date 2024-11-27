@@ -10,8 +10,10 @@ import { connect } from 'react-redux'
 import { colors } from '../../config/Constants1'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { SCREEN_WIDTH } from '../../config/Screen'
+import {useTranslation} from 'react-i18next';
 
 const ProductDetails = ({ route, navigation, dispatch }) => {
+    const {t} = useTranslation();
     const productData = route?.params?.productData
     return (
         <View style={{ flex: 1, backgroundColor: Colors.white }}>
@@ -42,7 +44,7 @@ const ProductDetails = ({ route, navigation, dispatch }) => {
                 <Ionicons name="call" color={colors.white_color} size={Sizes.fixPadding * 2} />
                 </TouchableOpacity>
             <TouchableOpacity activeOpacity={0.8} onPress={() => dispatch(EcommerceActions.addToCart(productData?._id))} style={{ backgroundColor: colors.background_theme2, paddingVertical: Sizes.fixPadding }}>
-                <Text style={{ ...Fonts.black16RobotoMedium, color: Colors.white, textAlign: 'center' }}>Add To Cart</Text>
+                <Text style={{ ...Fonts.black16RobotoMedium, color: Colors.white, textAlign: 'center' }}> {t('add_cart')}</Text>
             </TouchableOpacity>
             </View>
         )
