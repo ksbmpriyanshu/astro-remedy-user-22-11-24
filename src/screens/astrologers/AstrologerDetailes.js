@@ -209,7 +209,7 @@ const AstrologerDetailes = ({
 
         <View style={{ marginTop: Sizes.fixPadding * 1.5, justifyContent: 'center', alignItems: 'center', borderBottomWidth: 1, borderColor: Colors.grayMedium, paddingBottom: Sizes.fixPadding }}>
           <Text style={{ ...Fonts.primaryDark18RobotoMedium }}>
-            Customer Reviews
+          {t('customer_revie')}
           </Text>
         </View>
         <View style={{ marginTop: Sizes.fixPadding }}>
@@ -245,7 +245,7 @@ const AstrologerDetailes = ({
         </View>
         <View style={{ marginTop: Sizes.fixPadding * 1.5, justifyContent: 'center', alignItems: 'center', borderBottomWidth: 1, borderColor: Colors.grayMedium, paddingBottom: Sizes.fixPadding }}>
           <Text style={{ ...Fonts.primaryDark18RobotoMedium }}>
-            Rating and Reviews <Text style={{ color: Colors.black }}>({reviewData?.summary?.totalReview})</Text>
+          {t('Rating_reviews')}<Text style={{ color: Colors.black }}>({reviewData?.summary?.totalReview})</Text>
           </Text>
         </View>
         <View
@@ -341,7 +341,7 @@ const AstrologerDetailes = ({
         <View style={{ padding: Sizes.fixPadding * 0.4, backgroundColor: Colors.grayLight, marginTop: Sizes.fixPadding * 1.5 }}>
         </View>
         <View style={{ marginTop: Sizes.fixPadding * 1.5, justifyContent: 'center', alignItems: 'center', borderBottomWidth: 1, borderColor: Colors.grayMedium, paddingBottom: Sizes.fixPadding }}>
-          <Text style={{ ...Fonts.primaryDark18RobotoMedium, }}>Main Experties</Text>
+          <Text style={{ ...Fonts.primaryDark18RobotoMedium, }}>{t('main_expert')}</Text>
         </View>
         <Text
           textBreakStrategy='highQuality'
@@ -401,7 +401,7 @@ const AstrologerDetailes = ({
         <View style={{ padding: Sizes.fixPadding * 0.4, backgroundColor: Colors.grayLight, marginTop: Sizes.fixPadding * 1.5 }}>
         </View>
         <View style={{ marginTop: Sizes.fixPadding * 1.5, borderBottomWidth: 1, borderColor: Colors.grayMedium, }}>
-          <Text style={{ ...Fonts.primaryDark18RobotoMedium, marginBottom: Sizes.fixPadding, textAlign: 'center' }}>Remedies</Text>
+          <Text style={{ ...Fonts.primaryDark18RobotoMedium, marginBottom: Sizes.fixPadding, textAlign: 'center' }}>{t('remedies')}</Text>
         </View>
         <FlatList
           data={astroData?.remedies}
@@ -432,7 +432,7 @@ const AstrologerDetailes = ({
         <View style={{ padding: Sizes.fixPadding * 0.4, backgroundColor: Colors.grayLight, marginTop: Sizes.fixPadding * 1.5 }}>
         </View>
         <View style={{ marginTop: Sizes.fixPadding * 0.7, justifyContent: 'center', alignItems: 'center', borderBottomWidth: 1, borderColor: Colors.grayMedium, paddingBottom: Sizes.fixPadding * 0.5 }}>
-          <Text style={{ ...Fonts.primaryDark18RobotoMedium, color: Colors.primaryLight, paddingVertical: Sizes.fixPadding * 0.2 }}>About</Text>
+          <Text style={{ ...Fonts.primaryDark18RobotoMedium, color: Colors.primaryLight, paddingVertical: Sizes.fixPadding * 0.2 }}> {t('about')}</Text>
         </View>
         {astroData?.long_bio ? (<Text
           textBreakStrategy='highQuality'
@@ -519,7 +519,7 @@ const AstrologerDetailes = ({
       <View style={{ padding: Sizes.fixPadding * 0.5, backgroundColor: Colors.grayLight }}>
       </View>
       <View style={{ marginVertical: Sizes.fixPadding * 1.5, borderBottomWidth: 1, borderColor: Colors.grayMedium }}>
-        <Text style={{ ...Fonts.primaryDark18RobotoMedium, marginBottom: Sizes.fixPadding * 0.5, color: Colors.primaryLight, textAlign: 'center' }}>Consultancy Charges</Text>
+        <Text style={{ ...Fonts.primaryDark18RobotoMedium, marginBottom: Sizes.fixPadding * 0.5, color: Colors.primaryLight, textAlign: 'center' }}>{t('consultent_charge')}</Text>
       </View>
 
       <View style={{ flexDirection: 'row', marginHorizontal: Sizes.fixPadding }}>

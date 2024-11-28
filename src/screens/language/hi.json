@@ -48,6 +48,8 @@
       "male": "पुरुष",
       "female": "महिला",
       "add_cart": "कार्ट में जोड़ें",
+      "consultent_charge": "परामर्श शुल्क",
+      "main_expert": "मुख्य विशेषज्ञता",
       "get_kundli": "कुंडली प्राप्त करें",
       "update_kundli": "कुंडली अपडेट करें",
       "charts": "चार्ट",
@@ -442,7 +444,8 @@
     "my_order": "मेरा ऑर्डर",
     "delete_account": "खाता हटाएँ",
     "video": "वीडियो",
-    "video_astrologer": "ज्योतिषी के साथ वीडियो कॉल"
+    "video_astrologer": "ज्योतिषी के साथ वीडियो कॉल",
+    "customer_revie": "ग्राहक समीक्षा"
       
     }
 }

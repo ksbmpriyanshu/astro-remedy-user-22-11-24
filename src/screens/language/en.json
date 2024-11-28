@@ -267,6 +267,7 @@
     "user_type":"User Type",
     "my_share":"My Share",
     "customer_pays":"Customer Pays",
+    "customer_revie": "Customer Review",
     "at_share":"At Share",
     "astrologer_offers":"Astrologer Offers",
     "live_now":"Live Now",
@@ -443,7 +444,9 @@
     "view_details_report":"View Details Report",
     "delete_account": "Delete Account",
     "video_astrologer": "Video Call With Astrologer",
-    "add_cart": "Add to Cart"
+    "add_cart": "Add to Cart",
+    "consultent_charge": "Consultancy Charges",
+    "main_expert": "Main Experties"
     
   }
 }
