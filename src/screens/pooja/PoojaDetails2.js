@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Image, StyleSheet, ScrollView, Pressable } from 'react-native'
+import { View, Text, TouchableOpacity, Image, StyleSheet, ScrollView, Pressable, BackHandler, Alert } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import MyStatusBar from '../../components/MyStatusbar'
@@ -33,6 +33,7 @@ const PoojaDetails2 = ({ navigation, route, dispatch, customerData }) => {
     const [checked, setChecked] = useState('first');
     const [timeopen, setTimeopen] = useState(false)
     const [showtime, setShowtime] = useState({ HH: "01", MM: "10", SEC: "12" })
+    
     console.log("customerData", customerData)
     const [BookPujaData, setBookPujaData] = useState({
         pujaId: Pooja?._id,
@@ -41,6 +42,7 @@ const PoojaDetails2 = ({ navigation, route, dispatch, customerData }) => {
         time: null,
         mode: "offline"
     })
+    
     useEffect(() => {
         dispatch(HomeActions.getHomeData());
     })
@@ -53,9 +55,35 @@ const PoojaDetails2 = ({ navigation, route, dispatch, customerData }) => {
     }, [date, time])
     console.log("BookPujaData", BookPujaData)
 
+    useEffect(() => {
+        const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
+          // Show a custom alert when the back button is pressed
+          Alert.alert(
+            'Exit App?',
+            'Are you sure you want to exit?',
+            [
+              {
+                text: 'Cancel',
+                onPress: () => null,
+                style: 'cancel',
+              },
+              { text: 'YES', onPress: () =>  dispatch(PoojaActions.closeModal())},
+            ],
+            { cancelable: false }
+          );
+          return true;  // Returning true prevents the default back action
+        });
+    
+        // Cleanup when the component is unmounted
+        return () => {
+          backHandler.remove();
+        };
+      }, []);
+
+  
     function bookPujaHandle() {
-        // dispatch(PoojaActions.getBookPooja({ BookPujaData, customerData }));
-        dispatch(PoojaActions.openModal({ BookPujaData, customerData }))
+         dispatch(PoojaActions.getBookPooja({ BookPujaData, customerData }));
+        // dispatch(PoojaActions.openModal({ BookPujaData, customerData }))
     }
     return (
         <View style={{ flex: 1, backgroundColor: Colors.white }}>

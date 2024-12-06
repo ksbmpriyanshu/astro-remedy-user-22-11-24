@@ -148,8 +148,8 @@ const PoojaList = ({route, dispatch,newPoojaData,customerData,bookpujaHistoryDat
                     resizeMode="cover"
                 />
                 <View style={styles.box}>
-                    <Text style={{ color: "white", fontSize: getFontSize(1.5), fontWeight: "500" }}>{item?.pujaName}</Text>
-                    <Text style={{ color: "white", fontSize: getFontSize(1.5), fontWeight: "500" }}>{"₹"+item?.price}</Text>
+                    <Text style={{ color: "white", fontSize: getFontSize(1), fontWeight: "500" }}>{item?.pujaName}</Text>
+                    <Text style={{ color: "white", fontSize: getFontSize(1.2), fontWeight: "500" }}>{"₹"+item?.price}</Text>
                     <TouchableOpacity style={styles.btn}
                     onPress={()=>navigation.navigate('PoojaDetails2',{navigation,...item})}
                     >
@@ -248,6 +248,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         // borderRadius: 10
+        overflow:"hidden"
     },
     carouselItem: {
         // marginHorizontal: 10,
@@ -256,7 +257,7 @@ const styles = StyleSheet.create({
     },
     box: {
         paddingVertical: SCREEN_HEIGHT * 0.03,
-        paddingHorizontal: SCREEN_WIDTH * 0.08,
+        paddingHorizontal: SCREEN_WIDTH * 0.06,
         justifyContent: "center",
         alignItems: "center",
         gap: 10,

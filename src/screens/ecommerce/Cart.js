@@ -4,11 +4,12 @@ import { Colors, Sizes, Fonts } from '../../assets/style'
 import MyStatusBar from '../../components/MyStatusbar'
 import MyHeader from '../../components/MyHeader'
 import { showNumber } from '../../utils/services'
-import { SCREEN_WIDTH } from '../../config/Screen'
+import { SCREEN_HEIGHT, SCREEN_WIDTH } from '../../config/Screen'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import * as EcommerceActions from '../../redux/actions/ecommerceActions'
 import { connect } from 'react-redux'
 import { img_url } from '../../config/constants'
+import { colors } from '../../config/Constants1'
 
 const Cart = ({ navigation, dispatch, cartData,addressSelect }) => {
     console.log(addressSelect,'data')
@@ -39,10 +40,11 @@ const Cart = ({ navigation, dispatch, cartData,addressSelect }) => {
 
     function addressdetails() {
         return (
-            <View>
-                <Text style={{color:'black',fontSize:16}}>Address:</Text>
-                <Text style={{}}>{addressSelect?.house}, {addressSelect?.area}, {'\n'} {addressSelect?.city}, {addressSelect?.state} ,{addressSelect?.pincode}</Text>
-                <Text style={{color:'black',fontSize:18, fontWeight:'bold'}}>Phone Number: {addressSelect?.phone}</Text>
+            <View style={{paddingVertical:SCREEN_HEIGHT*0.02,paddingHorizontal:SCREEN_WIDTH*0.025,backgroundColor:colors.white_color,borderRadius:10,gap:1.5}}>
+
+                <Text style={{color:'black',fontSize:13,}}>Address:</Text>
+                <Text style={{color:colors.black_color6,fontSize:Sizes.fixPadding*1.2}}>{addressSelect?.house}, {addressSelect?.area},{'\n'}{addressSelect?.city}, {addressSelect?.state} ,{addressSelect?.pincode}</Text>
+                <Text style={{color:'black',fontSize:Sizes.fixPadding*1.2,}}>Phone Number: {addressSelect?.phone}</Text>
             </View>
         )
     }

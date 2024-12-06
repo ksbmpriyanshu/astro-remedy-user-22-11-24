@@ -41,7 +41,7 @@ const LiveChatCall = ({navigation, dispatch}) => {
          <Tab.Screen
           name="VideoHistory"
           component={VideoHistory}
-          options={{tabBarLabel: 'Video'}}
+          options={{tabBarLabel: 'Video....'}}
         />
       </Tab.Navigator>
     </View>

@@ -1,4 +1,4 @@
-import { Alert, Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Alert, BackHandler, Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { Modal } from 'react-native';
 import { colors, getFontSize } from '../config/Constants1';
@@ -8,6 +8,7 @@ import * as PoojaActions from '../redux/actions/PoojaActions'
 const PaymentModal = ({isVisible,dispatch,BookPujaData}) => {
     console.log("1111",BookPujaData)
     console.log("qqq0000",BookPujaData)
+    
     // const [BookPujaData, setBookPujaData] = useState({
     //     pujaId: "66fb903189a470d092b3cd3d",
     //     userId: "66e2ba1f42fd9f238df2e507",
@@ -34,7 +35,7 @@ const PaymentModal = ({isVisible,dispatch,BookPujaData}) => {
                 visible={isVisible}
                 onRequestClose={() => {
                     Alert.alert('Modal has been closed.');
-                    setModalVisible(!modalVisible);
+                    // setModalVisible(!modalVisible);
                 }}>
                 <View style={styles.centeredView}>
                     <View style={styles.modalView}>

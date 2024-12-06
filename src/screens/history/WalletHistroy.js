@@ -29,7 +29,7 @@ const WalletHistroy = ({ dispatch, navigation, walletHistory }) => {
                 ListHeaderComponent={<>
                     {/* {walletHistory && walletHistoryInfo()} */}
                     {walletHistory.length ? walletHistoryInfo() : <View style={{ display: "flex", justifyContent: "center", alignItems: "center", paddingVertical: 200 }}>
-                        <Text style={{ display: "flex", alignSelf: "center", justifyContent: "center",color:colors.black_color,fontSize:15 }}>No Data Available</Text>
+                        <Text style={{ display: "flex", alignSelf: "center", justifyContent: "center", color: colors.black_color, fontSize: 15 }}>No Data Available</Text>
                     </View>}
                 </>}
                 contentContainerStyle={{ paddingVertical: Sizes.fixPadding * 2, paddingHorizontal: Sizes.fixPadding * 1.5 }}
@@ -52,6 +52,8 @@ const WalletHistroy = ({ dispatch, navigation, walletHistory }) => {
                     return 'Balanced added to your wallet'
                 case 'PRODUCT':
                     return 'Product Purchased'
+                case 'VIDEO_CALL':
+                    return 'Deducted using Videocall'
                 default:
                     return type
             }

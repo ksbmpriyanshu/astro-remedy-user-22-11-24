@@ -15,7 +15,7 @@ const VideoHistory = ({videocallHistory}) => {
 console.log(videocallHistory,'video data')
   const renderItem = ({ item, index }) => {
     const Videocallprice = parseInt(item?.adminPrice) + parseInt(item?.partnerPrice)
-    console.log(Videocallprice)
+    console.log(Videocallprice,"anuj")
     return (
       <View style={styles.container}>
         <Text

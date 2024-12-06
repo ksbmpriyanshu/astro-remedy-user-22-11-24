@@ -84,14 +84,14 @@ function* getBookPooja(actions) {
         if (bookedResponse?.success) {
             yield put({ type: actionTypes.SET_BOOK_POOJA, payload: bookedResponse?.pooja })
             Alert.alert("AstroRemedy","PoojaBooed....")
-            // const razorpayResponse = yield razorpayPayment({ amount: bookedResponse?.order?.price, email: customerData?.email, contact: customerData?.phoneNumber, name: customerData?.customerName })
-            // console.log("razrp", razorpayResponse)
-            // if (razorpayResponse) {
-            //     call(navigate, 'Home');
-            //     console.log("payment", "true");
-            // }
-            // yield put({ type: actionTypes.OPEN_MODAL });
-            // console.log("OPEN_MODAL",actionTypes.OPEN_MODAL )
+            const razorpayResponse = yield razorpayPayment({ amount: bookedResponse?.order?.price, email: customerData?.email, contact: customerData?.phoneNumber, name: customerData?.customerName })
+            console.log("razrp", razorpayResponse)
+            if (razorpayResponse) {
+                call(navigate, 'Home');
+                console.log("payment", "true");
+            }
+            yield put({ type: actionTypes.OPEN_MODAL });
+            console.log("OPEN_MODAL",actionTypes.OPEN_MODAL )
         } else {
             Alert.alert("Astro Remedy", bookedResponse?.message);
         }
